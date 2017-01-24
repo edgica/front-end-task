@@ -1,0 +1,52 @@
+/*
+Write custom rules here ONLY!
+*/
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+
+/*Loader*/
+#ms-loader {
+    background-color: #FFF;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    > .loader {
+        @include prefix((transform: translateY(-50%)));
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+    }
+}
+/*End of Loader*/
+
+
+
+/*Table*/
+#ms-table {
+    .table > tbody > tr > td {
+        line-height: $avatar-size;
+    }
+
+    .avatar {
+        img {
+            border: 1px solid $table-border-color;
+            width: $avatar-size;
+            border-radius: 100%;
+        }
+
+        span {
+            padding-left: 5px;
+        }
+    }
+}
+/*End of Table*/

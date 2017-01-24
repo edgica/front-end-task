@@ -1,0 +1,28 @@
+/*
+ONLY mixins, no code here! 
+*/
+/*
+ONLY variables, no code here! 
+*/
+/* Custom variables */
+/*Bootstrap variables are below*/
+/*$grid-float-breakpoint: $screen-md-min;*/
+/* Loaders.css variables are below */
+/*
+Mixin for vendor-prefixes.
+Example: @include prefix((transform: translateY(-50%)));
+*/
+/*
+Mixin for background-size cover.
+Example: @include background-size-cover;
+*/
+/*
+Mixin for calc.
+Example: @include calc(height, 50% - 10px);
+*/
+/*
+Mixin for form-control-focus.
+Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+*/
+
+/*# sourceMappingURL=mixins.css.map */
