@@ -1,0 +1,18 @@
+/*
+ONLY variables, no code here! 
+*/
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../bower_components/loaders.css/src/_variables.scss";
+
+/* Custom variables */
+$sans-serif: Arial, Helvetica, sans-serif;
+$serif: "Times New Roman", Times, serif;
+$avatar-size: 32px;
+
+/*Bootstrap variables are below*/
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+/*$grid-float-breakpoint: $screen-md-min;*/
+
+/* Loaders.css variables are below */
+$primary-color: $brand-primary;

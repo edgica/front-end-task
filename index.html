@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edgica</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-app="app">
+        <div class="container">
+            <div ui-view="content"></div>
+        </div>
+
+        <!-- Dependencies -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-loaders/dist/angular-loaders.min.js"></script>
+
+        <!-- Modules -->
+        <script src="app/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="app/table/table.controller.js"></script>
+
+        <!-- Controllers -->
+        <script src="app/common/baseUrl.constant.js"></script>
+
+        <!-- Directives -->
+
+        <!-- Services -->
+
+        <!-- Factories -->
+        <script src="app/common/search.factory.js"></script>
+    </body>
+</html>
