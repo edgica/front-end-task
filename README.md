@@ -16,7 +16,7 @@ How to do a pull request https://help.github.com/articles/using-pull-requests/
 
 ## About ##
 
-Implementation is based on usage of [Angular2](https://angular.io/).
+Implementation is based on usage of [Angular2](https://angular.io/) and [Bootstrap](http://getbootstrap.com/).
 
 ## Install Node.JS and npm ##
 Download and install Node.JS from [official site](https://nodejs.org/)
