@@ -6,16 +6,16 @@
 
 class GridGitHubJS {
     constructor(rootElId) {
-        this.template = `
+        const template = `
             <div class="gridsterContainer">
                 <div class="stats">
                     <div class="total">Total items: <span id="rowCount"></span></div>
                     <div class="pager">
-                        <button id="pagePrev">Prev</button>
+                        <button id="prevPageBtn">Prev</button>
                         <span>
                             <span id="curPageNum"></span>/<span id="maxPageNum"></span>
                         </span>
-                        <button id="pageNext">Next</button>
+                        <button id="nextPageBtn">Next</button>
                     </div>
                 </div>
                 <table class="gridster">
@@ -39,7 +39,7 @@ class GridGitHubJS {
         `;
 
         // Add template to dom
-        document.getElementById(rootElId).innerHTML = this.template;
+        document.getElementById(rootElId).innerHTML = template;
 
         // Init
         this.tableBody = document.getElementById('gridsterTableBody');
@@ -57,7 +57,7 @@ class GridGitHubJS {
         this.rowCount = 0;
         this.url = 'https://api.github.com/search/repositories?q=map+language:javascript&sort=stars&order=desc';
         
-        var self = this;
+        const self = this;
 
         // Fetch data
         this.fetchData(self);
@@ -73,11 +73,11 @@ class GridGitHubJS {
         }, false);
 
         // Pagination
-        document.getElementById('pageNext').addEventListener('click', (e)=>{
-            self.nextPage(self);
-        }, false);
-        document.getElementById('pagePrev').addEventListener('click', (e)=>{
+        document.getElementById('prevPageBtn').addEventListener('click', (e)=>{
             self.prevPage(self);
+        }, false);
+        document.getElementById('nextPageBtn').addEventListener('click', (e)=>{
+            self.nextPage(self);
         }, false);
 
     }
