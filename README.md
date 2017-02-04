@@ -1,11 +1,11 @@
-# Fork this project and send back a pull request.
+# Grid app
 
-Create a simple grid by fetching and displaying data from GitHub Search API https://developer.github.com/v3/search/
+Fetching and displaying data from GitHub Search API https://developer.github.com/v3/search/
 
-Search for repositories that have been written in JavaScript. Use `map` search keyword. Sort by stars in descending order.
+## Usage:
 
-Feel free to choose CSS or JavaScript framework or libraries you want.
+1. Attach script and style files to your HTML file: `<script src="main.js"></script>`, `<link rel="stylesheet" href="style.css">`
 
-How to fork https://help.github.com/articles/fork-a-repo/
+2. Create new root node element: `<div id="myApp"></div>`
 
-How to do a pull request https://help.github.com/articles/using-pull-requests/
+3. Launch the app: `var myApp = new GridGitHubJS('myApp');`

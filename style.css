@@ -1,0 +1,105 @@
+.gridsterContainer {
+    width: 980px;
+    margin: 0 auto;
+    padding: 8px 0;
+    font: 16px/1.3em normal arial, sans-serif;
+}
+    .gridsterContainer button {
+        cursor: pointer;
+    }
+
+    /* Grid */
+    .gridster {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #333;
+        text-align: center;
+    }
+        .gridster th {
+            background: #666;
+            color: #fff;
+        }
+        .gridster tr:nth-child(odd) {
+            background: #f1f1f1;
+        }
+        .gridster td {
+            padding: 6px 4px;
+            overflow: hidden;
+        }
+
+        /* Colwidth */
+        .gridster th:nth-child(1) {
+            width: 100px;
+        }
+        .gridster th:nth-child(2) {
+            width: 100px;
+        }
+        .gridster th:nth-child(3) {
+            width: 40px;
+        }
+        .gridster th:nth-child(4) {
+            width: 400px;
+        }
+        .gridster th:nth-child(5) {
+            width: 80px;
+        }
+        .gridster th:last-child {
+            width: 80px;
+        }
+
+
+/* Stats */
+.gridsterContainer .stats {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+}
+    .gridsterContainer .total {
+        float: left;
+    }
+    /* Page nav */
+    .gridsterContainer .pager {
+        float: right;
+    }
+
+
+
+/* One item Detail popup */
+.gridsterDetailPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.gridsterDetailPopup.show {
+    display: block;
+}
+    .gridsterDetailPopup .body {
+        width: 800px;
+        max-height: 80%;
+        padding: 20px;
+        position: fixed;
+        background: #fff;
+        border: 1px solid black;
+        top: 50%;
+        left: 50%;
+        z-index: 105;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        overflow-y: auto;
+        font-size: 13px;
+    }
+    .gridsterDetailPopup .fog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 101;
+        background: rgba(0,0,0,.8);
+    }
