@@ -79,7 +79,10 @@
             <tbody>
               <tr *ngFor="let tableItem of foundRepositories">
                 <td *ngFor="let tableColumn of repositoriesTableColumns">
-                  {{tableItem[tableColumn.key]}}
+                  <a *ngIf="tableColumn.key === 'full_name'"
+                     [href]="'https://github.com/' + tableItem[tableColumn.key]"
+                  >{{tableItem[tableColumn.key]}}</a>
+                  <span *ngIf="tableColumn.key !== 'full_name'">{{tableItem[tableColumn.key]}}</span>
                 </td>
               </tr>
             </tbody>
