@@ -1,0 +1,25 @@
+html, body {
+  min-width: 400px;
+}
+
+.edgica-full-width {
+  &.btn-group {
+    border: 0;
+    display: table;
+    width: 100%;
+
+    & >.btn {
+      display: table-cell;
+      width: 50%;
+    }
+
+    & >.btn-group {
+      display: table-cell;
+      width: 50%;
+
+      & > .btn {
+        width: 100%;
+      }
+    }
+  }
+}
