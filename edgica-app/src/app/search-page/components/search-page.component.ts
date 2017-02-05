@@ -9,6 +9,26 @@ import { AppSearchPageService } from '../shared/search-page.service';
   providers: [AppSearchPageService],
 })
 export class AppSearchPageComponent {
+  repositoriesTableColumns: any = [
+    {
+      key: 'full_name',
+      label: 'Full name',
+    },
+    {
+      key: 'forks_count',
+      label: 'Forks',
+    },
+    {
+      key: 'stargazers_count',
+      label: 'Stars',
+    },
+    {
+      key: 'updated_at',
+      label: 'Updated',
+    },
+  ];
+  foundRepositories: any = [];
+  numberOfFoundRepositories: number = 0;
   searchParams:any = {
     q: 'map',
     sort: 'stars',
@@ -27,10 +47,13 @@ export class AppSearchPageComponent {
     };
     this.appSearchPageService.searchRepositories(requestParams)
       .then((response: any) => {
-        console.log(response.json());
+        let data = response.json(); // console.log(data);
+
+        this.numberOfFoundRepositories = data.total_count;
+        this.foundRepositories = data.items;
       })
       .catch((error: any) => {
-        console.log(error.json());
+        this.numberOfFoundRepositories = 0; // console.log(error.json());
       });
   }
 }

@@ -63,4 +63,29 @@
       </div>
     </div>
   </div>
+  <div class="row" *ngIf="numberOfFoundRepositories > 0">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Found repositories ({{foundRepositories.length}} of {{numberOfFoundRepositories}})</div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th *ngFor="let tableColumn of repositoriesTableColumns">
+                  {{tableColumn.label}}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tableItem of foundRepositories">
+                <td *ngFor="let tableColumn of repositoriesTableColumns">
+                  {{tableItem[tableColumn.key]}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
