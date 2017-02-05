@@ -60,6 +60,7 @@ export class AppSearchPageComponent {
     order: this.validOrderItems[1],
   };
   title:string = 'Search GitHub';
+  errorString: string = '';
 
   constructor(private appSearchPageService: AppSearchPageService) {
   }
@@ -70,6 +71,9 @@ export class AppSearchPageComponent {
       sort: this.searchParams.sort.key,
       order: this.searchParams.order.key,
     };
+
+    this.errorString = '';
+
     this.appSearchPageService.searchRepositories(requestParams)
       .then((response: any) => {
         let data = response.json(); // console.log(data);
@@ -77,8 +81,10 @@ export class AppSearchPageComponent {
         this.numberOfFoundRepositories = data.total_count;
         this.foundRepositories = data.items;
       })
-      .catch((error: any) => {
-        this.numberOfFoundRepositories = 0; // console.log(error.json());
+      .catch((response: any) => {
+        let data = response.json(); // console.log(data);
+        this.numberOfFoundRepositories = 0;
+        this.errorString = data.message || 'Unknown backend error';
       });
   }
 }
