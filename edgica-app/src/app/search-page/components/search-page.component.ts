@@ -24,6 +24,16 @@ export class AppSearchPageComponent {
       label: 'Updated',
     },
   ];
+  validOrderItems: any = [
+    {
+      key: 'asc',
+      label: 'ASC',
+    },
+    {
+      key: 'desc',
+      label: 'DESC',
+    },
+  ];
   repositoriesTableColumns: any = [
     {
       key: 'full_name',
@@ -47,7 +57,7 @@ export class AppSearchPageComponent {
   searchParams:any = {
     q: 'map',
     sort: this.validSortItems[0],
-    order: 'desc',
+    order: this.validOrderItems[1],
   };
   title:string = 'Search GitHub';
 
@@ -58,7 +68,7 @@ export class AppSearchPageComponent {
     let requestParams: any = {
       q: this.searchParams.q,
       sort: this.searchParams.sort.key,
-      order: this.searchParams.order,
+      order: this.searchParams.order.key,
     };
     this.appSearchPageService.searchRepositories(requestParams)
       .then((response: any) => {
