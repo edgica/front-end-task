@@ -42,8 +42,8 @@ export class AppSearchPageComponent {
   onClickSearch() {
     let requestParams: any = {
       q: this.searchParams.q,
-      sort: this.searchParams.stars,
-      order: this.searchParams.desc,
+      sort: this.searchParams.sort,
+      order: this.searchParams.order,
     };
     this.appSearchPageService.searchRepositories(requestParams)
       .then((response: any) => {
