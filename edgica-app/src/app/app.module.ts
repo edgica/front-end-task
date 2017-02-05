@@ -5,9 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
+import { TooltipModule } from 'ng2-bootstrap';
+
 import { appRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { AppSearchPageComponent } from "./search-page/components/search-page.component";
+import { AppSearchPageService } from './search-page/shared/search-page.service';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,11 @@ import { AppSearchPageComponent } from "./search-page/components/search-page.com
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    TooltipModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    AppSearchPageService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
