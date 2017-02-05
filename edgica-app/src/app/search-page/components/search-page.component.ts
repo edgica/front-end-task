@@ -9,6 +9,21 @@ import { AppSearchPageService } from '../shared/search-page.service';
   providers: [AppSearchPageService],
 })
 export class AppSearchPageComponent {
+  isSortExpanded: false;
+  validSortItems: any = [
+    {
+      key: 'stars',
+      label: 'Stars',
+    },
+    {
+      key: 'forks',
+      label: 'Forks',
+    },
+    {
+      key: 'updated',
+      label: 'Updated',
+    },
+  ];
   repositoriesTableColumns: any = [
     {
       key: 'full_name',
@@ -31,7 +46,7 @@ export class AppSearchPageComponent {
   numberOfFoundRepositories: number = 0;
   searchParams:any = {
     q: 'map',
-    sort: 'stars',
+    sort: this.validSortItems[0],
     order: 'desc',
   };
   title:string = 'Search GitHub';
@@ -42,7 +57,7 @@ export class AppSearchPageComponent {
   onClickSearch() {
     let requestParams: any = {
       q: this.searchParams.q,
-      sort: this.searchParams.sort,
+      sort: this.searchParams.sort.key,
       order: this.searchParams.order,
     };
     this.appSearchPageService.searchRepositories(requestParams)

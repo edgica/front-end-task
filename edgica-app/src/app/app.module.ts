@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
+import { DropdownModule } from 'ng2-bootstrap';
 import { TooltipModule } from 'ng2-bootstrap';
 
 import { appRoutes } from './app.routing';
@@ -23,6 +24,7 @@ import { AppSearchPageService } from './search-page/shared/search-page.service';
     HttpModule,
     RouterModule.forRoot(appRoutes),
     TooltipModule.forRoot(),
+    DropdownModule.forRoot(),
   ],
   providers: [
     AppSearchPageService,
