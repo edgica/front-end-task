@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html{
+	height: 100%;
+}
+
+.page_content {
+	min-height: 100%;
+	font-size: 0;
+	max-width: 960px;
+	min-width: 660px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #e3e9ff;
+}
+
+.form_content {
+	display: inline-block;
+	margin: 10px auto;
+}
+
+.search_content {
+	margin-top: 20px;
+}
+
+.search_button {
+	border: none;
+	height: 100%;
+	font-size: 20px;
+	padding: 10px;
+	background-color: #3a50a6; 
+	color: #fff;
+	text-shadow: 1px 1px #444;
+	border-radius: 3px;	
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #777;
+}
+
+.search_button:hover {
+	background-color: #6477c4;
+}
+
+.search_button:active {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+.result_el {
+	display: inline-block;
+	width: 330px;
+	height: 150px;	
+	background-color: #fff;
+	border-radius: 3px;
+	color: #333;
+	margin: 5px;
+	vertical-align: top;
+	font-size: 14px;
+	background-size: cover;
+	text-align: left;
+	box-shadow: 1px 1px 1px #777;
+}
+
+.result_contet {
+	display: inline-block;
+	width: 160px;
+	margin-top: 10px;
+}
+
+.result_avatar {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	vertical-align: top;
+	font-size: 14px;
+	border-radius: 3px 0 0 3px;
+	margin-left: 0;
+}
+
+.result_el_content {
+	color: #eee;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+}
+
+.result_git_url {
+	display: inline-block;
+	vertical-align: top;
+	width: 120px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.annotation {
+	font-size: 14px;
+	margin: 10px auto 20px;
+    width: 560px;
+    color: #aaa;
+    text-shadow: 1px 1px #111;
+}

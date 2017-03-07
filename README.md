@@ -1,11 +1,11 @@
-# Fork this project and send back a pull request.
+## It is test task of Ievgeniia Miroshko.
 
-Create a simple grid by fetching and displaying data from GitHub Search API https://developer.github.com/v3/search/
+To create a simple grid `https://github.com/janl/mustache.js` was used.
 
-Search for repositories that have been written in JavaScript. Use `map` search keyword. Sort by stars in descending order.
+`mustache.js` is an implementation of the mustache template system in JavaScript.
 
-Feel free to choose CSS or JavaScript framework or libraries you want.
+Mustache is a logic-less template syntax. It can be used for HTML, config files, source code - anything. It works by expanding tags in a template using values provided in a hash or object.
 
-How to fork https://help.github.com/articles/fork-a-repo/
+To start your search for repositories that have been written in JavaScript, used `map` search keyword and sorted by stars in descending order, please click on button "Search for map tag". As a result you will see grid of first 100 github repositories matching the search parameters.
 
-How to do a pull request https://help.github.com/articles/using-pull-requests/
+And good luck!
