@@ -1,0 +1,42 @@
+
+
+<div class="netGrid">
+  <div *ngFor="let item of items"
+       class="netCol w25">
+    <section class="span2 fixedHeight">
+      <p class="text-left"><span>Full name: </span>{{item.full_name}}</p>
+      <!--<p class="text-left"><span>Url: </span>{{item.html_url}}</p>-->
+      <p class="text-left">
+        <a href="#"
+           (click)="appModal.openWithArgs('ITEM INFO',parseItem(item))">
+          View details &raquo;
+        </a></p>
+    </section>
+  </div>
+</div>
+
+<div class="netGrid">
+  <div class="netCol w33 form">
+    <select class="pagingPer" name="pagingPer" id="pagingPerPage"
+            [ngModel]="perPage" (ngModelChange)="reInitiatePagingView($event)">
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <label class="pagingMeta" for="pagingPerPage">per page</label>
+  </div>
+  <div class="netCol w66">
+    <nav class="paging pagingRight" [attr.data-paging-total]="paging_total">
+      <a href="#page={{current_page}}" class="pagingPrevious" rel="prev"
+         (click)="prevPage()"
+         title="Previous Page">Prev</a>
+      <input  [ngModel]="current_page" (ngModelChange)="loadPage($event)"
+              type="number" value="1" min="1" max="{{paging_total}}" />
+      <span class="pagingMeta">of <span class="pagingMax">{{paging_total}}</span></span>
+      <a class="pagingNext" href="#page={{current_page}}" rel="next" title="Next Page"
+         (click)="nextPage()">Next</a>
+    </nav>
+  </div>
+</div>
+
+<app-modal width="768px" #appModal></app-modal>

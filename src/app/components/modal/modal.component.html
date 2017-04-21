@@ -1,0 +1,14 @@
+<div class="commModalContainer" *ngIf="show" (click)="close(true)">
+  <div class="commModal" [ngClass]="{hasTitle: title}" [ngStyle]="{width: width}" (click)="$event.stopPropagation();">
+    <button type="button" class="close" data-dismiss="modal" (click)="close(true)">&times;</button>
+    <header class="modalHeader" *ngIf="title">
+      <h4 class="modalTitle">{{title}}</h4>
+    </header>
+    <div class="commModalContents">
+      <div  class="netGrid">
+        <div *ngIf="bodyMsg" class="netCol w100 netColRow"><code>{{bodyMsg}}</code></div>
+      </div>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
