@@ -1,0 +1,48 @@
+.commModalContainer {
+  content: '';
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1005;
+}
+
+.commModal {
+  background: #f8f7f3 none no-repeat 50% 50%;
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
+  clear: both;
+  margin: 20px;
+  max-width: 100%;
+  min-height: 42px;
+  min-width: 260px;
+  padding: 20px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.commModalHeader {
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+  margin: -20px -20px 20px -20px;
+  padding: 10px 20px;
+}
+
+.commModalContents {
+  display: block;
+  height: 550px;
+  overflow: auto;
+}
+
+
+

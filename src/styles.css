@@ -1,0 +1,27 @@
+.netGrid{margin-left:-20px;word-wrap:break-word}
+.netGrid::after{clear:both;content:'';display:table}
+.netCol{float:left;min-height:1px;padding-left:20px}
+.netGridPadded{padding:20px 20px 20px 0}
+.netGridPadded.netGridNoGutters{padding-left:20px}
+.netGrid ~ .netGrid,.netCol ~ .netColRow,.netCol ~ .netColRow ~ .netCol{margin-top:20px}
+.w10{width:10%}.w12{width:12.5%}.w16{width:16.66666%}.w20{width:20%}.w25{width:25%}.w30{width:30%}.w33{width:33.33333%}
+.w37{width:37.5%}.w40{width:40%}.w50{width:50%}.w60{width:60%}.w62{width:62.5%}.w66{width:66.66666%}.w70{width:70%}
+.w75{width:75%}.w80{width:80%}.w83{width:83.33333%}.w87{width:87.5%}.w90{width:90%}.w100{width:100%}
+.netColRow{clear:both}.netColRight{float:right}.netColRight+.netCol+.netColRight{clear:right;margin-top:20px}
+.netCol:first-child+.netColRight+.netCol{clear:left;margin-top:20px}
+
+
+.paging{min-height:30px;text-align:center}.pagingRight{text-align:right}.pagingNum{padding-left:8px}
+.pagingMeta{color:#555;display:inline-block;margin-right:8px;position:relative}.paging .pagingMeta{top:2px}
+select.pagingSelect,select.pagingPer{width:auto}.paging input{margin:0 4px;padding:4px 1px;width:50px}
+select.pagingSelect{margin:0 4px}@media print{select.pagingSelect,.paging input{border:none !important;box-shadow:none !important}
+  .pagingNext,.pagingPrevious,.pagingPer,.pagingPer+.pagingMeta{display:none !important}}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
