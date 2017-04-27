@@ -13,5 +13,4 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.mainService.getData().subscribe(data => {this.data = data; console.log(data)});
   }
-
 }
