@@ -1,0 +1,12 @@
+<repository-search [query]="searchQuery$ | async" (search)="search($event)"></repository-search>
+<ngx-datatable
+  class="material"
+  [rows]="repositoriesCopy | async"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [loadingIndicator]="loading$ | async"
+  >
+</ngx-datatable>
